@@ -3,12 +3,18 @@
   color: hsl(0, 100%, 50%);
 }
 
-.small-para {
+.para.small-para { /* placing <.small-para> below <.para> also works. <.small-para> then follows the last-defined rule */
   font-size: 14px;
 }
 
 .para {
   font-size: 22px;
+}
+
+.button { /* Shifted <.button> above <.confirm>. Doing <.button.confirm> also works. Or use the ID selector. */
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
 
 .confirm {
@@ -17,13 +23,8 @@
   font-weight: bold;
 } 
 
-.button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.child {
+.text.child { /* <.text .child> also works. Because line 19 is a descendant of the class <.text>. 
+<div .child> or <div.child> will not work here. Because of similar specificity to <div.text> (last defined rule order) */
   color: red;
   font-size: 14px;
 }
@@ -32,3 +33,4 @@ div.text {
   color: green;
   font-size: 22px;
 }
+/* <div .child> or <div.child> also works if it is below <div.text>. (Similar specificity, last defined rule order) */
