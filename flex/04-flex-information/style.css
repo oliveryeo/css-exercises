@@ -10,7 +10,21 @@ img {
 .title {
   font-size: 36px;
   font-weight: 900;
+  text-align: center; /* shift this to body instead */
 }
+
+.container {
+  display: flex; /* ✅ */
+  justify-content: space-evenly; /* center */
+  gap: 24px; /* ✅ */
+}
+
+.item-1, .item-2, .item-3, .item-4 {
+  text-align: center; /* shift this to body instead */
+  margin: 24px 0; /* Can "margin-bottom" on .title instead */
+  /* "max-width: 200px" missing */
+}
+
 
 /* do not edit this footer */
 .footer {

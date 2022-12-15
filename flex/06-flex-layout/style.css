@@ -5,6 +5,39 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex; /* ✅ */
+  flex-direction: column; /* ✅ */
+  justify-content: space-between;
+}
+
+.header, .footer {
+  display: flex; /* ✅ */
+  justify-content: space-between; /* ✅ */
+  padding: 12px; /* ✅ 16px to be exact*/
+}
+
+.footer {
+  background-color: #eeeeee; /* ✅ */
+}
+
+.content {
+  /* Missing "flex: 1;" */
+  display: flex; /* ✅ */
+  flex-direction: column; /* ✅ */
+  justify-content: center; /* ✅ */
+  align-items: center; /* ✅ */
+}
+
+.left-links {
+  display: flex;
+  gap: 16px;
+}
+
+.right-links {
+  display: flex;
+  gap: 16px;
+  margin-right: 32px; /* ❌ recall <ul> has default margin and padding. Need to set that to 0! */
+  /* 🚧 But technically right-links and left-links targets the <ul> also since the class is assigned to them*/
 }
 
 img {
@@ -16,6 +49,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 12px; /* ✅ 8px 16px to be accurate */
 }
 
 input {
@@ -24,4 +58,20 @@ input {
   padding: 8px 24px;
   width: 400px;
   margin-bottom: 16px;
+}
+
+ul {
+  list-style-type: none; /* ✅ */
+  /* If you want to target <ul>:
+  "display: flex;"
+  "list-style: none;"
+  "margin: 0;"
+  "padding: 0;"
+  "gap: 16px"
+  */
+}
+
+a {
+  text-decoration: none; /* ✅ */
+  /* "color: #666" missing */
 }
