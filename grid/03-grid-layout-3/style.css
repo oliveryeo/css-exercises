@@ -149,6 +149,8 @@ ul, li {
 .card .title {
   font-size: 18px;
   text-align: center;
+  /* Items added */
+  margin-bottom: 0.5rem;
 }
 
 .footer {
