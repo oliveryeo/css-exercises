@@ -48,6 +48,13 @@ html, body, .container {
   grid-column: 2;
 }
 
+/* Section added */
+.header .menu ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+
 .menu ul,
 .menu li {
   font-size: 16px;
