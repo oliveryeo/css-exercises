@@ -47,19 +47,20 @@ ul, li {
 }
 
 /* Section added */
-.header .logo {
+.logo {
   grid-column: 1;
+  justify-self: start;
 }
 
 /* Section added */
-.header .menu {
+.menu {
   grid-column: 2;
 }
 
 /* Section added */
-.header .menu ul {
+.menu ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
 }
 
 
